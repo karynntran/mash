@@ -1,5 +1,5 @@
-var names = ["ben1", "ben2", "ben3", "ben4", "ben5"];
-var luckyNumber = 6;
+var names = [1,2,3,4,5];
+var luckyNumber = 10;
 var eliminateThis = luckyNumber -1;
 
 
@@ -8,22 +8,34 @@ var eliminateThis = luckyNumber -1;
 //remove the first element
 //go through the function again
 
+// var eliminationLoop = function(array, number){
+	
+// 	if (array.length > 1) {
+// 		var modIndex = number%array.length-1;
+// 		array.splice(modNumber,1)
+// 		return eliminationLoop(array,luckyNumber);
+// 	} else {
+
+// 	} 
+
+// }
+
 var eliminationLoop = function(array, number){
 	
 	if (array.length > 1) {
+		console.log(array);
 		if (array.length >= number){
 			var choiceAfter = array.splice(eliminateThis);
 			Array.prototype.unshift.apply(array,choiceAfter);
 			array.shift();
 			return eliminationLoop(array,luckyNumber);
 		} else {
-			console.log("testingMod");
 			var modNumber = number%array.length-1;
-			console.log(modNumber);
 			// console.log(array[modNumber]);
-			array.splice(modNumber,1);
+			var choiceAfter = array.splice(modNumber);
+			Array.prototype.unshift.apply(array,choiceAfter);
+			array.shift();
 			// console.log(array);
-			console.log(array, "splicedArray");
 			return eliminationLoop(array,luckyNumber);
 		}
 	} else {
@@ -32,36 +44,7 @@ var eliminationLoop = function(array, number){
 }
 
 
-// var eliminateNames = function(array, luckyNumber){
-
-// 	if (array.length > 0){
-// 		var choiceAfter = array.splice(eliminateThis);
-// 		console.log(choiceAfter, "spliced");
-// 		Array.prototype.unshift.apply(array,choiceAfter);
-// 		console.log(array, "bring array to front");
-// 		array.shift();
-// 		console.log(array, "new array");
-// 		return eliminateNames(array,luckyNumber);
-// 	} else {
-// 		return array[0];
-// 	};
-// }
-
-
-
-
-// var countdown = function(value) {
-//     if (value > 0) {
-//         console.log(value);
-//         return countdown(value - 1);
-//     } else {
-//         return value;
-//     }
-// };
-// countdown(10);
-
 document.addEventListener("DOMContentLoaded", function() {
 	console.log("working");
-	// countdown(10);
 	// eliminateNames(names,luckyNumber);
 });
