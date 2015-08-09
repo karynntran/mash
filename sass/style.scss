@@ -1,3 +1,17 @@
+@keyframes slide-left-forty {
+    100% { left: 40%; }
+}
+@keyframes slide-left-fifty {
+    100% { left: 50%; }
+}
+@keyframes slide-right-forty {
+    100% { right: 40%; }
+}
+@keyframes slide-right-fifty {
+    100% { right: 50%; }
+}
+
+
 body {
 	color: gray;
 	font-family: 'Happy Monkey', cursive;
@@ -26,6 +40,28 @@ body {
 .mash-intro-overlay {
 	background: rgba(212, 135, 109,.4);
 	height: 100%;
+}
+
+
+.title1 { 
+	left: -100px;
+	position: absolute;
+    animation: slide-left-forty 0.5s forwards;
+}
+.title3 {
+	left: 100px;
+	position: absolute;
+    animation: slide-left-fifty 0.5s forwards;
+}
+.title2 { 
+	right: -100px;
+	position: absolute;
+    animation: slide-right-fifty 0.5s forwards;
+}
+.title4 {
+	right: -10px;
+	position: absolute;
+    animation: slide-right-forty 0.5s forwards;
 }
 
 .mash-forms {
