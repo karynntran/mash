@@ -35,8 +35,8 @@ body {
 	font-family: 'Lily Script One', cursive;
 	font-size: 75px;
 	width: 100%;
-	height: 20%;
-	position: absolute;
+	height: 100px;
+	position: relative;
 	margin: 0 auto;
 	top: 0;
 	right: 0;
@@ -70,6 +70,23 @@ body {
     animation: slide-right-forty 0.5s forwards;
 }
 
+.nav {
+	height: 10px;
+	width: 100%;
+	position: absolute;
+	top: 150px;
+	left: 34%;
+	margin: 0 auto;
+}
+
+.nav-circles {
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	background-color: $tan;
+	margin: 0 20px;
+	float: left;
+}
 
 .mash-forms {
 	width: 600px;
@@ -79,7 +96,7 @@ body {
 	margin: 0 auto;
 	padding: 10px;
 	text-align: center;
-	top: 24%;
+	top: 190px;
 	left: 24%;
 	position: absolute;
 	display: inline;
