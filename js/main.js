@@ -32,12 +32,17 @@ var eliminationLoop = function(array, number){
 			return eliminationLoop(array,luckyNumber);
 		}
 	} else {
-		return array;
+		return array[0];
 	}
 }
 
 
 document.addEventListener("DOMContentLoaded", function() {
-	console.log("working");
-	// eliminateNames(names,luckyNumber);
+	document.getElementById('spouseButton').addEventListener('click', function(e){
+	    e.preventDefault();
+	    console.log("clicked");
+	    grabValues("spouse", spouse);
+	    var answer = eliminationLoop(spouse,5);
+	    document.getElementById('spouseAnswer').innerHTML = answer;
+	})
 });
