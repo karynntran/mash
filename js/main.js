@@ -2,23 +2,16 @@ var names = [1,2,3,4,5];
 var luckyNumber = 10;
 var eliminateThis = luckyNumber -1;
 
+var spouse = [];
 
-//grab indexOf and everything after it
-//unshift everything to the front of the array
-//remove the first element
-//go through the function again
-
-// var eliminationLoop = function(array, number){
-	
-// 	if (array.length > 1) {
-// 		var modIndex = number%array.length-1;
-// 		array.splice(modNumber,1)
-// 		return eliminationLoop(array,luckyNumber);
-// 	} else {
-
-// 	} 
-
-// }
+function grabValues(categoryID, array){
+	var numArray = [1,2,3,4,5];
+	for (var i=0; i < numArray.length; i++){
+		var option = document.getElementById("" + categoryID + numArray[i]).value;
+		array.push(option);
+		console.log(array);
+	};
+}
 
 var eliminationLoop = function(array, number){
 	
