@@ -1,12 +1,18 @@
-var names = [1,2,3,4,5];
+// var names = [1,2,3,4,5];
 
 var spouse = [];
 var marriageAge = [];
 var honeymoon = [];
 var numberOfKids = [];
 
+function insertAnswers(string,array,luckyNumber){
+	grabValues(string, array);
+	var answer = eliminationLoop(array,luckyNumber);
+	document.getElementById(string + 'Answer').innerHTML = answer;
+}
+
 function grabValues(categoryID, array){
-	var numArray = [1,2,3,4,5];
+	var numArray = [1,2,3,4];
 	for (var i=0; i < numArray.length; i++){
 		var option = document.getElementById("" + categoryID + numArray[i]).value;
 		array.push(option);
@@ -35,20 +41,27 @@ var eliminationLoop = function(array, number){
 }
 
 
+
+
 document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById('playMashButton').addEventListener('click', function(e){
 	    e.preventDefault();
-	    console.log("clicked");
-
-	    var luckyNumber = 5;
 
 	    grabValues("spouse", spouse);
 	    var spouseAnswer = eliminationLoop(spouse,5);
 	    document.getElementById('spouseAnswer').innerHTML = spouseAnswer;
 
 	    grabValues("marriageAge", marriageAge);
-	    var answer = eliminationLoop(marriageAge,5);
-	    document.getElementById('marriageAgeAnswer').innerHTML = answer;
+	    var marriageAgeAnswer = eliminationLoop(marriageAge,5);
+	    document.getElementById('marriageAgeAnswer').innerHTML = marriageAgeAnswer;
+
+	    grabValues("honeymoon", honeymoon);
+	    var honeymoonAnswer = eliminationLoop(honeymoon,5);
+	    document.getElementById('honeymoonAnswer').innerHTML = honeymoonAnswer;
+
+	    grabValues("numberOfKids", numberOfKids);
+	    var numberOfKidsAnswer = eliminationLoop(numberOfKids,5);
+	    document.getElementById('numberOfKidsAnswer').innerHTML = numberOfKidsAnswer;
 
 	})
 });
