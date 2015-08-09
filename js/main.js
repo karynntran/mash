@@ -6,6 +6,10 @@ var spouse = [];
 var marriageAge = [];
 var honeymoon = [];
 var numberOfKids = [];
+var pet = [];
+var job = [];
+var liveIn = [];
+var car = [];
 
 function insertAnswers(string,array,luckyNumber){
 	grabValues(string, array);
@@ -46,7 +50,11 @@ function getAnswers(luckyNumber){
     	"spouse",
     	"marriageAge",
     	"honeymoon",
-    	"numberOfKids"
+    	"numberOfKids",
+    	"job",
+    	"pet",
+    	"car",
+    	"liveIn"
     ];
 
     for (var i=0; i < categories.length; i++){
