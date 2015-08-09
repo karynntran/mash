@@ -62,8 +62,6 @@ function getAnswers(luckyNumber){
 	    document.getElementById(string + 'Answer').innerHTML = answer;
     }
 
-
-
     // grabValues("marriageAge", marriageAge);
     // var marriageAgeAnswer = eliminationLoop(marriageAge,5);
     // document.getElementById('marriageAgeAnswer').innerHTML = marriageAgeAnswer;

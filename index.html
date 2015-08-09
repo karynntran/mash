@@ -4,54 +4,57 @@
 	<meta charset="UTF-8">
 	<title>mash</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Happy+Monkey|Lily+Script+One|Codystar' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div id="content">
-		<div class="mash-intro">m a s h</div>
+		<div class="mash-intro">
+			<div class="mash-intro-overlay">m a s h</div>
+		</div>
 		<div class="mash-forms">
-			<div id="spouse">
+			<div class="category" id="spouse">
 				<p>SPOUSE</p>
-				<input class="spouse" id="spouse1"></input>
-				<input class="spouse" id="spouse2"></input>
-				<input class="spouse" id="spouse3"></input>
-				<input class="spouse" id="spouse4"></input>
+				<input type="text" class="spouse" id="spouse1"></input>
+				<input type="text" class="spouse" id="spouse2"></input>
+				<input type="text" class="spouse" id="spouse3"></input>
+				<input type="text" class="spouse" id="spouse4"></input>
 
 			</div>
 
-			<div id="marriageAge">
+			<div class="category" id="marriageAge">
 				<p>MARRIAGE AGE</p>
-				<input class="marriageAge" id="marriageAge1"></input>
-				<input class="marriageAge" id="marriageAge2"></input>
-				<input class="marriageAge" id="marriageAge3"></input>
-				<input class="marriageAge" id="marriageAge4"></input>
+				<input type="text" class="marriageAge" id="marriageAge1"></input>
+				<input type="text" class="marriageAge" id="marriageAge2"></input>
+				<input type="text" class="marriageAge" id="marriageAge3"></input>
+				<input type="text" class="marriageAge" id="marriageAge4"></input>
 			</div>
 
-			<div id="honeymoon">
+			<div class="category" id="honeymoon">
 				<p>HONEYMOON</p>
-				<input class="honeymoon" id="honeymoon1"></input>
-				<input class="honeymoon" id="honeymoon2"></input>
-				<input class="honeymoon" id="honeymoon3"></input>
-				<input class="honeymoon" id="honeymoon4"></input>
+				<input type="text" class="honeymoon" id="honeymoon1"></input>
+				<input type="text" class="honeymoon" id="honeymoon2"></input>
+				<input type="text" class="honeymoon" id="honeymoon3"></input>
+				<input type="text" class="honeymoon" id="honeymoon4"></input>
 			</div>
 
-			<div id="numberOfKids">
+			<div class="category" id="numberOfKids">
 				<p>NUMBER OF KIDS</p>
-				<input class="numberOfKids" id="numberOfKids1"></input>
-				<input class="numberOfKids" id="numberOfKids2"></input>
-				<input class="numberOfKids" id="numberOfKids3"></input>
-				<input class="numberOfKids" id="numberOfKids4"></input>
+				<input type="text" class="numberOfKids" id="numberOfKids1"></input>
+				<input type="text" class="numberOfKids" id="numberOfKids2"></input>
+				<input type="text" class="numberOfKids" id="numberOfKids3"></input>
+				<input type="text" class="numberOfKids" id="numberOfKids4"></input>
 			</div>
 		</div>
 
-		<input id="randomNumberButton" type="submit" value="RANDOM NUMBER">
-		<input id="playMashButton" type="submit" value="PLAY MASH">
-
+		<div class="action">
+			<input id="randomNumberButton" type="submit" value="RANDOM NUMBER">
+			<input id="playMashButton" type="submit" value="PLAY MASH">
+		</div>
 
 		<div class="answers">
-			You will marry <div id="spouseAnswer"></div>
-			At the age of <div id="marriageAgeAnswer"></div>
-			And go to your honeymoon to <div id="honeymoonAnswer"></div>
-			And have <div id="numberOfKidsAnswer"></div>kids.
+			You will marry <div class="answer-style" id="spouseAnswer"></div> at the age of <div class="answer-style" id="marriageAgeAnswer"></div>.
+			Your honeymoon will be in <div class="answer-style" id="honeymoonAnswer"></div>. You will have <div class="answer-style" id="numberOfKidsAnswer"></div>kids.
 		</div>
 
 	</div>
