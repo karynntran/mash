@@ -1,5 +1,5 @@
 var names = ["ben1", "ben2", "ben3", "ben4", "ben5"];
-var luckyNumber = 4;
+var luckyNumber = 6;
 var eliminateThis = luckyNumber -1;
 
 
@@ -8,21 +8,44 @@ var eliminateThis = luckyNumber -1;
 //remove the first element
 //go through the function again
 
-
-var eliminateNames = function(array, luckyNumber){
-
-	if (array.length > 0){
-		var choiceAfter = array.splice(eliminateThis);
-		console.log(choiceAfter, "spliced");
-		Array.prototype.unshift.apply(array,choiceAfter);
-		console.log(array, "bring array to front");
-		array.shift();
-		console.log(array, "new array");
-		return eliminateNames(array,luckyNumber);
+var eliminationLoop = function(array, number){
+	
+	if (array.length > 1) {
+		if (array.length >= number){
+			var choiceAfter = array.splice(eliminateThis);
+			Array.prototype.unshift.apply(array,choiceAfter);
+			array.shift();
+			return eliminationLoop(array,luckyNumber);
+		} else {
+			console.log("testingMod");
+			var modNumber = number%array.length-1;
+			console.log(modNumber);
+			// console.log(array[modNumber]);
+			array.splice(modNumber,1);
+			// console.log(array);
+			console.log(array, "splicedArray");
+			return eliminationLoop(array,luckyNumber);
+		}
 	} else {
-		return array[0];
-	};
+		return array;
+	}
 }
+
+
+// var eliminateNames = function(array, luckyNumber){
+
+// 	if (array.length > 0){
+// 		var choiceAfter = array.splice(eliminateThis);
+// 		console.log(choiceAfter, "spliced");
+// 		Array.prototype.unshift.apply(array,choiceAfter);
+// 		console.log(array, "bring array to front");
+// 		array.shift();
+// 		console.log(array, "new array");
+// 		return eliminateNames(array,luckyNumber);
+// 	} else {
+// 		return array[0];
+// 	};
+// }
 
 
 
