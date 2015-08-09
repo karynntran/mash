@@ -1,8 +1,8 @@
 @keyframes slide-left-forty {
     100% { left: 40%; }
 }
-@keyframes slide-left-fifty {
-    100% { left: 50%; }
+@keyframes slide-left-fiftytwo {
+    100% { left: 52%; }
 }
 @keyframes slide-right-forty {
     100% { right: 40%; }
@@ -10,6 +10,12 @@
 @keyframes slide-right-fifty {
     100% { right: 50%; }
 }
+
+$darkBrown: rgb(69,53,47);
+$tan: rgb(202,197,187);
+$dustyRose: rgb(113,74,77);
+$white: #FFFFFF;
+
 
 
 body {
@@ -29,12 +35,13 @@ body {
 	font-family: 'Lily Script One', cursive;
 	font-size: 75px;
 	width: 100%;
-	height: 150px;
+	height: 20%;
+	position: absolute;
 	margin: 0 auto;
 	top: 0;
 	right: 0;
 	text-align: center;
-	color: white;
+	color: $white;
 }
 
 .mash-intro-overlay {
@@ -42,38 +49,51 @@ body {
 	height: 100%;
 }
 
+.title-letters {
+	position: absolute;
+}
 
 .title1 { 
 	left: -100px;
-	position: absolute;
     animation: slide-left-forty 0.5s forwards;
 }
 .title3 {
-	left: 100px;
-	position: absolute;
-    animation: slide-left-fifty 0.5s forwards;
+	left: -100px;
+    animation: slide-left-fiftytwo 0.5s forwards;
 }
 .title2 { 
 	right: -100px;
-	position: absolute;
     animation: slide-right-fifty 0.5s forwards;
 }
 .title4 {
-	right: -10px;
-	position: absolute;
+	right: -100px;
     animation: slide-right-forty 0.5s forwards;
 }
 
+
 .mash-forms {
-	width: 85%;
-	height: 200px;
+	width: 600px;
+	height: 400px;
+	overflow-y: hidden;
+	overflow-x: scroll;
 	margin: 0 auto;
+	padding: 10px;
 	text-align: center;
+	top: 24%;
+	left: 24%;
+	position: absolute;
+	display: inline;
+	border: 1px dotted lightgray;
 	input {
 		display: block;
 		width: 80%;
 		margin: 10px auto;
-		border-style: none none solid none;
+		border-style: none none dotted none;
+		border-color: $white;
+		border-width: thin;
+		background-color: $darkBrown;
+		color: $white;
+		font-size: 20px;
 	}
 	input[type="text"] {
 	    font-size:15px;
@@ -81,22 +101,57 @@ body {
 	}
 }
 
-.category {
-	width: 24%;
+.mash-form-small {
 	float: left;
+	height: 100%;
+	width: 3000px;
+	margin: auto;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+.category {
+	width: 500px;
+	height: 295px;
+	float: left;
+	border-radius: 10px;
+	border: 1px solid lightgray;
+	color: $white;
+	padding: 20px;
+	margin: 20px;
+}
+
+.category:nth-child(1n+0){
+	background-color: $darkBrown;
+	input {
+		background-color: $darkBrown;
+	}
+}
+.category:nth-child(2n+0){
+	background-color: $dustyRose;
+	input {
+		background-color: $dustyRose;
+	}
+}
+.category:nth-child(3n+0){
+	background-color: $tan;
+	input {
+		background-color: $tan;
+	}
 }
 
 .action {
-	display: block;
+	display: none;
 	width: 100%;
-	height: 70px;
+	height: 5%;
 	background-color: darkgray;
 	margin: 0 auto;
-	clear: left;
+	position: absolute;
+	top: 80%;
 }
 
 .answers {
-	display: inline;
+	display: none;
 	background: lightgray;
 	width: 100%;
 	min-height: 70px;
