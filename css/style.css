@@ -1,15 +1,15 @@
-@keyframes slide-left-forty {
+@keyframes m-slide {
   100% {
-    left: 40%; } }
-@keyframes slide-left-fiftytwo {
+    left: -11%; } }
+@keyframes s-slide {
   100% {
-    left: 52%; } }
-@keyframes slide-right-forty {
+    left: 3%; } }
+@keyframes a-slide {
   100% {
-    right: 40%; } }
-@keyframes slide-right-fifty {
+    right: 3%; } }
+@keyframes h-slide {
   100% {
-    right: 50%; } }
+    right: -11%; } }
 body {
   color: gray;
   font-family: 'Happy Monkey', cursive;
@@ -37,33 +37,44 @@ body {
   background: rgba(212, 135, 109, 0.4);
   height: 100%; }
 
+.title-container {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto; }
+
+.title {
+  width: 600px;
+  margin: 0 auto; }
+
 .title-letters {
-  position: absolute; }
+  position: relative; }
 
 .title1 {
-  left: -100px;
-  animation: slide-left-forty 0.5s forwards; }
+  left: -900px;
+  animation: m-slide 0.5s forwards; }
 
 .title3 {
-  left: -100px;
-  animation: slide-left-fiftytwo 0.5s forwards; }
+  left: -900px;
+  animation: s-slide 0.5s forwards; }
 
 .title2 {
-  right: -100px;
-  animation: slide-right-fifty 0.5s forwards; }
+  right: -900px;
+  animation: a-slide 0.5s forwards; }
 
 .title4 {
-  right: -100px;
-  animation: slide-right-forty 0.5s forwards; }
+  right: -900px;
+  animation: h-slide 0.5s forwards; }
 
-.nav {
-  height: 10px;
+.nav-content {
+  height: 100%;
   width: 100%;
   position: relative;
-  top: 170px; }
+  top: 30px;
+  margin: 0 auto; }
 
 .nav-circle-container {
-  width: 500px;
+  width: 452px;
+  height: 20px;
   margin: 35px auto; }
 
 .nav-circles {
@@ -94,6 +105,11 @@ body {
   position: relative;
   top: -5px; }
 
+.main-content {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto; }
+
 .mash-forms {
   width: 600px;
   height: 400px;
@@ -102,9 +118,9 @@ body {
   margin: 0 auto;
   padding: 10px;
   text-align: center;
-  top: 190px;
-  left: 24%;
   position: absolute;
+  left: 25%;
+  top: 200px;
   display: inline;
   border: 1px dotted lightgray; }
   .mash-forms input {
@@ -117,16 +133,17 @@ body {
     border-width: thin;
     background-color: #45352f;
     color: #FFFFFF;
-    font-size: 20px; }
+    font-size: 20px;
+    text-align: center; }
   .mash-forms input[type="text"] {
     font-size: 20px;
     font-family: 'Architects Daughter', cursive; }
 
 .mash-form-small {
   float: left;
-  height: 100%;
+  height: 400px;
   width: 5000px;
-  margin: auto;
+  margin: 0 auto;
   overflow-y: hidden;
   overflow-x: hidden; }
 
@@ -155,6 +172,48 @@ body {
   .category:nth-child(3n+0) input {
     background-color: #45352f; }
 
+.arrows {
+  width: 70%;
+  margin: 5px auto;
+  position: relative;
+  top: 20px; }
+
+.circle-left, .circle-right {
+  background-color: darkgray;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: inline; }
+
+.circle-left {
+  float: left; }
+
+.circle-right {
+  float: right; }
+
+.arrow-left {
+  float: left;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #FFFFFF;
+  margin: 0 auto;
+  position: relative;
+  top: 10px;
+  left: 15px; }
+
+.arrow-right {
+  float: right;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid white;
+  position: relative;
+  top: 10px;
+  right: 15px; }
+
 .action {
   width: 100%;
   height: 5%;
@@ -180,5 +239,9 @@ body {
   font-family: 'Architects Daughter', cursive;
   font-size: 35px;
   color: black; }
+
+@media (max-width: 768px) {
+  .mash-intro {
+    color: blue; } }
 
 /*# sourceMappingURL=style.css.map */

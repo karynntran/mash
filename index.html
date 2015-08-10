@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>mash</title>
+	<meta name="viewport" content="width=device-width">	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Happy+Monkey|Lily+Script+One|Codystar' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
@@ -11,11 +12,13 @@
 	<div id="content">
 		<div class="mash-intro">
 			<div class="mash-intro-overlay">
-				<div class="title">
-					<span class="title-letters title1">m</span>
-					<span class="title-letters title2">a</span>
-					<span class="title-letters title3">s</span>
-					<span class="title-letters title4">h</span>
+				<div class="title-container">
+					<div class="title">
+						<span class="title-letters title1">m</span>
+						<span class="title-letters title2">a</span>
+						<span class="title-letters title3">s</span>
+						<span class="title-letters title4">h</span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -33,71 +36,104 @@
 			</div>			
 		</div>
 
-		<div class="mash-forms">
-			<div class="mash-form-small">
-				<div class="category" id="spouse">
-					<p>SPOUSE</p>
-					<input type="text" class="spouse" id="spouse1"></input>
-					<input type="text" class="spouse" id="spouse2"></input>
-					<input type="text" class="spouse" id="spouse3"></input>
-					<input type="text" class="spouse" id="spouse4"></input>
+		<div class="main-content">
+			<div class="mash-forms">
+				<div class="mash-form-small">
+					<div class="category" id="spouse">
+						<p>SPOUSE</p>
+						<input type="text" class="spouse" id="spouse1"></input>
+						<input type="text" class="spouse" id="spouse2"></input>
+						<input type="text" class="spouse" id="spouse3"></input>
+						<input type="text" class="spouse" id="spouse4"></input>
+						<div class="arrows">
+							<div class="circle-left"><div class="arrow-left" id="spouseArrowLeft"></div></div>
+							<div class="circle-right"><div class="arrow-right" id="spouseArrowRight"></div></div>
+						</div>
+					</div>
 
-				</div>
+					<div class="category" id="marriageAge">
+						<p>MARRIAGE AGE</p>
+						<input type="text" class="marriageAge" id="marriageAge1"></input>
+						<input type="text" class="marriageAge" id="marriageAge2"></input>
+						<input type="text" class="marriageAge" id="marriageAge3"></input>
+						<input type="text" class="marriageAge" id="marriageAge4"></input>
+						<div class="arrows">
+							<div class="circle"><div class="arrow-left" id="spouseArrowLeft"></div></div>
+							<div class="circle"><div class="arrow-right" id="spouseArrowRight"></div></div>
+						</div>
+					</div>
 
-				<div class="category" id="marriageAge">
-					<p>MARRIAGE AGE</p>
-					<input type="text" class="marriageAge" id="marriageAge1"></input>
-					<input type="text" class="marriageAge" id="marriageAge2"></input>
-					<input type="text" class="marriageAge" id="marriageAge3"></input>
-					<input type="text" class="marriageAge" id="marriageAge4"></input>
-				</div>
+					<div class="category" id="honeymoon">
+						<p>HONEYMOON</p>
+						<input type="text" class="honeymoon" id="honeymoon1"></input>
+						<input type="text" class="honeymoon" id="honeymoon2"></input>
+						<input type="text" class="honeymoon" id="honeymoon3"></input>
+						<input type="text" class="honeymoon" id="honeymoon4"></input>
+						<div class="arrows">
+							<div class="circle"><div class="arrow-left" id="spouseArrowLeft"></div></div>
+							<div class="circle"><div class="arrow-right" id="spouseArrowRight"></div></div>
+						</div>
+					</div>
 
-				<div class="category" id="honeymoon">
-					<p>HONEYMOON</p>
-					<input type="text" class="honeymoon" id="honeymoon1"></input>
-					<input type="text" class="honeymoon" id="honeymoon2"></input>
-					<input type="text" class="honeymoon" id="honeymoon3"></input>
-					<input type="text" class="honeymoon" id="honeymoon4"></input>
-				</div>
+					<div class="category" id="numberOfKids">
+						<p>NUMBER OF KIDS</p>
+						<input type="text" class="numberOfKids" id="numberOfKids1"></input>
+						<input type="text" class="numberOfKids" id="numberOfKids2"></input>
+						<input type="text" class="numberOfKids" id="numberOfKids3"></input>
+						<input type="text" class="numberOfKids" id="numberOfKids4"></input>
+						<div class="arrows">
+							<div class="circle"><div class="arrow-left" id="spouseArrowLeft"></div></div>
+							<div class="circle"><div class="arrow-right" id="spouseArrowRight"></div></div>
+						</div>
+					</div>
 
-				<div class="category" id="numberOfKids">
-					<p>NUMBER OF KIDS</p>
-					<input type="text" class="numberOfKids" id="numberOfKids1"></input>
-					<input type="text" class="numberOfKids" id="numberOfKids2"></input>
-					<input type="text" class="numberOfKids" id="numberOfKids3"></input>
-					<input type="text" class="numberOfKids" id="numberOfKids4"></input>
-				</div>
+					<div class="category" id="job">
+						<p>JOB</p>
+						<input type="text" class="job" id="job1"></input>
+						<input type="text" class="job" id="job2"></input>
+						<input type="text" class="job" id="job3"></input>
+						<input type="text" class="job" id="job4"></input>
+						<div class="arrows">
+							<div class="circle"><div class="arrow-left" id="spouseArrowLeft"></div></div>
+							<div class="circle"><div class="arrow-right" id="spouseArrowRight"></div></div>
+						</div>
+					</div>
 
-				<div class="category" id="job">
-					<p>JOB</p>
-					<input type="text" class="job" id="job1"></input>
-					<input type="text" class="job" id="job2"></input>
-					<input type="text" class="job" id="job3"></input>
-					<input type="text" class="job" id="job4"></input>
-				</div>
+					<div class="category" id="pet">
+						<p>PET</p>
+						<input type="text" class="pet" id="pet1"></input>
+						<input type="text" class="pet" id="pet2"></input>
+						<input type="text" class="pet" id="pet3"></input>
+						<input type="text" class="pet" id="pet4"></input>
+						<div class="arrows">
+							<div class="circle"><div class="arrow-left" id="spouseArrowLeft"></div></div>
+							<div class="circle"><div class="arrow-right" id="spouseArrowRight"></div></div>
+						</div>
+					</div>
 
-				<div class="category" id="pet">
-					<p>PET</p>
-					<input type="text" class="pet" id="pet1"></input>
-					<input type="text" class="pet" id="pet2"></input>
-					<input type="text" class="pet" id="pet3"></input>
-					<input type="text" class="pet" id="pet4"></input>
-				</div>
+					<div class="category" id="car">
+						<p>CAR</p>
+						<input type="text" class="car" id="car1"></input>
+						<input type="text" class="car" id="car2"></input>
+						<input type="text" class="car" id="car3"></input>
+						<input type="text" class="car" id="car4"></input>
+						<div class="arrows">
+							<div class="circle"><div class="arrow-left" id="spouseArrowLeft"></div></div>
+							<div class="circle"><div class="arrow-right" id="spouseArrowRight"></div></div>
+						</div>
+					</div>
 
-				<div class="category" id="car">
-					<p>CAR</p>
-					<input type="text" class="car" id="car1"></input>
-					<input type="text" class="car" id="car2"></input>
-					<input type="text" class="car" id="car3"></input>
-					<input type="text" class="car" id="car4"></input>
-				</div>
-
-				<div class="category" id="cityToLive">
-					<p>LIVE IN</p>
-					<input type="text" class="liveIn" id="liveIn1"></input>
-					<input type="text" class="liveIn" id="liveIn2"></input>
-					<input type="text" class="liveIn" id="liveIn3"></input>
-					<input type="text" class="liveIn" id="liveIn4"></input>
+					<div class="category" id="cityToLive">
+						<p>LIVE IN</p>
+						<input type="text" class="liveIn" id="liveIn1"></input>
+						<input type="text" class="liveIn" id="liveIn2"></input>
+						<input type="text" class="liveIn" id="liveIn3"></input>
+						<input type="text" class="liveIn" id="liveIn4"></input>
+						<div class="arrows">
+							<div class="circle"><div class="arrow-left" id="spouseArrowLeft"></div></div>
+							<div class="circle"><div class="arrow-right" id="spouseArrowRight"></div></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
