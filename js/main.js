@@ -105,12 +105,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	document.getElementById('arrowRight').addEventListener('click', function(e){
 	    e.preventDefault();
-	    if (currentCategory < 10){
+	    if (currentCategory < 9){
 	    	var nextCategory = document.getElementsByClassName('category'+ (currentCategory +1));
 	    	currentCategory = currentCategory + 1;
+	    	console.log(currentCategory);
 	    	currentCategoryElement = nextCategory;
 	    	document.getElementsByClassName("category" + currentCategory)[0].scrollIntoView();
-
 	    	changeNav(currentCategoryElement);
 	    } else {
 	    	//change to MASH button;
