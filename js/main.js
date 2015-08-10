@@ -1,4 +1,7 @@
 // var names = [1,2,3,4,5];
+var currentCategory = 1;
+var currentCategoryElement = document.getElementsByClassName('category1')[0];
+
 var diceArray = [1,2,3,4,5,6,7,8,9,10];
 var randomNumber;
 
@@ -83,7 +86,14 @@ function getAnswers(luckyNumber){
     // document.getElementById('numberOfKidsAnswer').innerHTML = numberOfKidsAnswer;
 }
 
+function changeNav(currentCategoryElement){
+	var id = currentCategoryElement[0].getAttribute('id');
+	document.getElementsByClassName('selected-nav')[0].classList.remove('selected-nav');
+	document.getElementById(id+'Nav').classList.add('selected-nav');
+}
+
 document.addEventListener("DOMContentLoaded", function() {
+
 	document.getElementById('playMashButton').addEventListener('click', function(e){
 	    e.preventDefault();
 	    getAnswers(randomNumber);
@@ -92,4 +102,18 @@ document.addEventListener("DOMContentLoaded", function() {
 	    e.preventDefault();
 	    var randomNumber = diceArray[Math.floor(Math.random() * diceArray.length)];
 	})
+
+	document.getElementById('arrowRight').addEventListener('click', function(e){
+	    e.preventDefault();
+	    if (currentCategory < 10){
+	    	var nextCategory = document.getElementsByClassName('category'+ (currentCategory +1));
+	    	currentCategory = currentCategory + 1;
+	    	currentCategoryElement = nextCategory;
+	    	document.getElementsByClassName("category" + currentCategory)[0].scrollIntoView();
+
+	    	changeNav(currentCategoryElement);
+	    } else {
+	    	//change to MASH button;
+	    }
+	});
 });
