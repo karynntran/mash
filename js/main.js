@@ -110,7 +110,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	    	currentCategory = currentCategory + 1;
 	    	console.log(currentCategory);
 	    	currentCategoryElement = nextCategory;
-	    	document.getElementsByClassName("category" + currentCategory)[0].scrollIntoView();
+	    	document.getElementsByClassName("category" + currentCategory)[0].scrollIntoView(false);
+	    	console.log(currentCategoryElement);
 	    	changeNav(currentCategoryElement);
 	    } else {
 	    	//change to MASH button;
