@@ -97,6 +97,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById('playMashButton').addEventListener('click', function(e){
 	    e.preventDefault();
 	    getAnswers(randomNumber);
+	    var answers = document.getElementsByClassName('answers');
+	    answers[0].style.display = "block";
 	})
 	document.getElementById('randomNumberButton').addEventListener('click', function(e){
 	    e.preventDefault();

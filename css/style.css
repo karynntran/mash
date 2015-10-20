@@ -116,7 +116,7 @@ body {
   position: relative; }
 
 .mash-forms {
-  width: 96%;
+  width: 93%;
   height: 75%;
   overflow-y: hidden;
   overflow-x: hidden;
@@ -149,6 +149,11 @@ body {
   margin: 0 auto;
   overflow-y: hidden;
   overflow-x: hidden; }
+
+.rotate:hover {
+  -webkit-transform: rotateZ(-30deg);
+  -ms-transform: rotateZ(-30deg);
+  transform: rotateZ(-30deg); }
 
 .category {
   width: 500px;
